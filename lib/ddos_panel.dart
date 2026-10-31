@@ -19,7 +19,7 @@ class AttackPanel extends StatefulWidget {
 class _AttackPanelState extends State<AttackPanel> with TickerProviderStateMixin {
   final targetController = TextEditingController();
   final portController = TextEditingController();
-  final String baseUrl = "http://zamnode.myserverr.web.id:2065";
+  final String baseUrl = "http://127.0.0.1:3143";
   late AnimationController _controller;
   String selectedDoosId = "";
   double attackDuration = 60;

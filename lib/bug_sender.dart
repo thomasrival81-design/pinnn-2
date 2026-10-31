@@ -61,7 +61,7 @@ class _BugSenderPageState extends State<BugSenderPage> with TickerProviderStateM
 
     try {
       final response = await http.get(
-        Uri.parse("http://zamnode.myserverr.web.id:2065/mySender?key=${widget.sessionKey}"),
+        Uri.parse("http://127.0.0.1:3143/mySender?key=${widget.sessionKey}"),
         headers: {'Content-Type': 'application/json'},
       );
 
@@ -183,7 +183,7 @@ class _BugSenderPageState extends State<BugSenderPage> with TickerProviderStateM
   Future<void> _addSender(String number) async {
     setState(() => isLoading = true);
     try {
-      final response = await http.get(Uri.parse("http://zamnode.myserverr.web.id:2065/getPairing?key=${widget.sessionKey}&number=$number"));
+      final response = await http.get(Uri.parse("http://127.0.0.1:3143/getPairing?key=${widget.sessionKey}&number=$number"));
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
         if (data["valid"] == true) {
@@ -331,7 +331,7 @@ class _BugSenderPageState extends State<BugSenderPage> with TickerProviderStateM
     if (confirmed == true) {
       setState(() => isLoading = true);
       try {
-        final response = await http.delete(Uri.parse("http://zamnode.myserverr.web.id:2065./deleteSender?key=${widget.sessionKey}&id=$senderId"));
+        final response = await http.delete(Uri.parse("http://127.0.0.1:3143/deleteSender?key=${widget.sessionKey}&id=$senderId"));
         if (response.statusCode == 200) {
           final data = jsonDecode(response.body);
           if (data["valid"] == true) {

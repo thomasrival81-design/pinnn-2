@@ -47,7 +47,7 @@ class _SellerPageState extends State<SellerPage> {
   Future<void> _fetchUsers() async {
     setState(() => isLoading = true);
     try {
-      final res = await http.get(Uri.parse('http://zamnode.myserverr.web.id:2065/listUsers?key=${widget.keyToken}'));
+      final res = await http.get(Uri.parse('http://127.0.0.1:3143/listUsers?key=${widget.keyToken}'));
       final data = jsonDecode(res.body);
       if (data['valid'] == true && data['authorized'] == true) {
         fullUserList = data['users'] ?? [];
@@ -84,7 +84,7 @@ class _SellerPageState extends State<SellerPage> {
     }
     setState(() => isLoading = true);
     try {
-      final res = await http.get(Uri.parse('http://zamnode.myserverr.web.id:2065/deleteUser?key=${widget.keyToken}&username=$username'));
+      final res = await http.get(Uri.parse('http://127.0.0.1:3143/deleteUser?key=${widget.keyToken}&username=$username'));
       final data = jsonDecode(res.body);
       if (data['deleted'] == true) {
         _alert("Sukses", "User berhasil dihapus.");
@@ -109,7 +109,7 @@ class _SellerPageState extends State<SellerPage> {
     }
     setState(() => isLoading = true);
     try {
-      final url = Uri.parse('http://zamnode.myserverr.web.id:2065/createAccount?key=${widget.keyToken}&newUser=$u&pass=$p&day=$d');
+      final url = Uri.parse('http://127.0.0.1:3143/createAccount?key=${widget.keyToken}&newUser=$u&pass=$p&day=$d');
       final res = await http.get(url);
       final data = jsonDecode(res.body);
       if (data['created'] == true) {
@@ -138,7 +138,7 @@ class _SellerPageState extends State<SellerPage> {
     }
     setState(() => isLoading = true);
     try {
-      final url = Uri.parse('http://zamnode.myserverr.web.id:2065/editUser?key=${widget.keyToken}&username=$u&addDays=$d');
+      final url = Uri.parse('http://127.0.0.1:3143/editUser?key=${widget.keyToken}&username=$u&addDays=$d');
       final res = await http.get(url);
       final data = jsonDecode(res.body);
       if (data['edited'] == true) {

@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'widgets/custom_popup.dart';
 
-const String _baseUrl = "http://zamnode.myserverr.web.id:2065";
+const String _baseUrl = "http://127.0.0.1:3143";
 
 class DevPage extends StatefulWidget {
   final String sessionKey;

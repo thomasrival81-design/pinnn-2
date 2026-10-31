@@ -53,7 +53,7 @@ class _AdminPageState extends State<AdminPage> {
   Future<void> _fetchUsers() async {
     setState(() => isLoading = true);
     try {
-      final res = await http.get(Uri.parse('http://zamnode.myserverr.web.id:2065/listUsers?key=$sessionKey'));
+      final res = await http.get(Uri.parse('http://127.0.0.1:3143/listUsers?key=$sessionKey'));
       final data = jsonDecode(res.body);
       if (data['valid'] == true && data['authorized'] == true) {
         fullUserList = data['users'] ?? [];
@@ -90,7 +90,7 @@ class _AdminPageState extends State<AdminPage> {
     }
     setState(() => isLoading = true);
     try {
-      final res = await http.get(Uri.parse('http://zamnode.myserverr.web.id:2065/deleteUser?key=$sessionKey&username=$username'));
+      final res = await http.get(Uri.parse('http://127.0.0.1:3143/deleteUser?key=$sessionKey&username=$username'));
       final data = jsonDecode(res.body);
       if (data['deleted'] == true) {
         _alert("Sukses", "User berhasil dihapus.");
@@ -115,7 +115,7 @@ class _AdminPageState extends State<AdminPage> {
     }
     setState(() => isLoading = true);
     try {
-      final url = Uri.parse('http://zamnode.myserverr.web.id:2065/userAdd?key=$sessionKey&username=$u&password=$p&day=$d&role=$newUserRole');
+      final url = Uri.parse('http://127.0.0.1:3143/userAdd?key=$sessionKey&username=$u&password=$p&day=$d&role=$newUserRole');
       final res = await http.get(url);
       final data = jsonDecode(res.body);
       if (data['created'] == true) {
@@ -143,7 +143,7 @@ class _AdminPageState extends State<AdminPage> {
     }
     setState(() => isLoading = true);
     try {
-      final url = Uri.parse('http://zamnode.myserverr.web.id:2065/editUser?key=$sessionKey&username=$u&addDays=$d');
+      final url = Uri.parse('http://127.0.0.1:3143/editUser?key=$sessionKey&username=$u&addDays=$d');
       final res = await http.get(url);
       final data = jsonDecode(res.body);
       if (data['edited'] == true) {

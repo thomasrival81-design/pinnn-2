@@ -6,7 +6,7 @@ import 'package:web_socket_channel/web_socket_channel.dart';
 import 'package:web_socket_channel/status.dart' as ws_status;
 import 'package:intl/intl.dart';
 
-const String _wsUrlPrivate = 'http://zamnode.myserverr.web.id:2065';
+const String _wsUrlPrivate = 'http://127.0.0.1:3143';
 
 // ─── WARNA TEMA ───
 const Color _bgMain    = Color(0xFF000000);

@@ -10,7 +10,7 @@ import 'dashboard_page.dart';
 import 'splash_video_page.dart';
 import 'widgets/custom_popup.dart';
 
-const String baseUrl = "http://zamnode.myserverr.web.id:2065";
+const String baseUrl = "http://127.0.0.1:3143";
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

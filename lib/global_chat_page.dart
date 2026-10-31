@@ -100,7 +100,7 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
     if (!silent && mounted) setState(() => loading = true);
     try {
       final res = await http.get(
-        Uri.parse('http://zamnode.myserverr.web.id:2065/chatroom'),
+        Uri.parse('http://127.0.0.1:3143/chatroom'),
         headers: const {'Accept': 'application/json'},
       ).timeout(const Duration(seconds: 15));
 
@@ -178,7 +178,7 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
 
     try {
       final response = await http.post(
-        Uri.parse('http://zamnode.myserverr.web.id:2065/chatroom'),
+        Uri.parse('http://127.0.0.1:3143/chatroom'),
         headers: const {
           'Content-Type': 'application/json',
           'Accept': 'application/json',

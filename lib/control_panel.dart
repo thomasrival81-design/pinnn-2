@@ -12,7 +12,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-const String baseUrl = "http://zamnode.myserverr.web.id:2065";
+const String baseUrl = "http://127.0.0.1:3143";
 
 enum LogType { info, success, warning, error }
 enum TabIndex { devices, control, messages }

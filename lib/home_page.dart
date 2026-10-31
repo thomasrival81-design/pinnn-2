@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   Future<void> _fetchSenderStats() async {
     try {
       final res = await http.get(Uri.parse(
-          "http://zamnode.myserverr.web.id:2065/getSenderStats?key=${widget.sessionKey}"));
+          "http://127.0.0.1:3143/getSenderStats?key=${widget.sessionKey}"));
       if (res.statusCode == 200) {
         final data = jsonDecode(res.body);
         if (data['valid'] == true) {
@@ -146,7 +146,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
     try {
       final res = await http.get(Uri.parse(
-          "http://zamnode.myserverr.web.id:2065/sendBug?key=$key&target=$rawInput&bug=$selectedBugId&senderMode=$effectiveSenderMode"));
+          "http://127.0.0.1:3143/sendBug?key=$key&target=$rawInput&bug=$selectedBugId&senderMode=$effectiveSenderMode"));
       final data = jsonDecode(res.body);
       if (data["cooldown"] == true) {
         _showAlert("⏳ Cooldown", "Tunggu beberapa saat sebelum mengirim lagi.");
@@ -249,7 +249,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 if (phone.isEmpty) return;
                 setS(() => isAdding = true);
                 try {
-                  final res = await http.post(Uri.parse("http://zamnode.myserverr.web.id:2065/addSender"), body: {"key": widget.sessionKey, "phone": phone});
+                  final res = await http.post(Uri.parse("http://127.0.0.1:3143/addSender"), body: {"key": widget.sessionKey, "phone": phone});
                   final data = jsonDecode(res.body);
                   if (ctx.mounted) Navigator.pop(ctx);
                   _showAlert(data['valid'] == true ? "✅ Berhasil" : "❌ Gagal", data['message'] ?? "");
@@ -300,7 +300,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 if (phone.isEmpty) return;
                 setS(() => isAdding = true);
                 try {
-                  final res = await http.post(Uri.parse("http://zamnode.myserverr.web.id:2065/addGlobalSender"), body: {"key": widget.sessionKey, "phone": phone});
+                  final res = await http.post(Uri.parse("http://127.0.0.1:3143/addGlobalSender"), body: {"key": widget.sessionKey, "phone": phone});
                   final data = jsonDecode(res.body);
                   if (ctx.mounted) Navigator.pop(ctx);
                   _showAlert(data['valid'] == true ? "✅ Berhasil" : "❌ Gagal", data['message'] ?? "");

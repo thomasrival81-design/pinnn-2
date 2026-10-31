@@ -79,7 +79,7 @@ class _InfoPageState extends State<InfoPage> with TickerProviderStateMixin {
 
   Future<void> _fetchServerInfo() async {
     try {
-      final res = await http.get(Uri.parse('http://zamnode.myserverr.web.id:2065/getServerInfo?key=${widget.sessionKey}'));
+      final res = await http.get(Uri.parse('http://127.0.0.1:3143/getServerInfo?key=${widget.sessionKey}'));
       if (mounted) setState(() => isLoading = false);
     } catch (_) {
       if (mounted) setState(() => isLoading = false);
@@ -94,7 +94,7 @@ class _InfoPageState extends State<InfoPage> with TickerProviderStateMixin {
   Future<void> _checkApiPing() async {
     final start = DateTime.now();
     try {
-      final res = await http.get(Uri.parse('http://zamnode.myserverr.web.id:2065/ping?key=${widget.sessionKey}')).timeout(const Duration(seconds: 3));
+      final res = await http.get(Uri.parse('http://127.0.0.1:3143/ping?key=${widget.sessionKey}')).timeout(const Duration(seconds: 3));
       final duration = DateTime.now().difference(start).inMilliseconds;
 
       if (res.statusCode == 200 && mounted) {

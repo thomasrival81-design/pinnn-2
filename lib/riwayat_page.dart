@@ -41,7 +41,7 @@ class _RiwayatPageState extends State<RiwayatPage> {
   Future<void> _loadActivities() async {
     // Definisikan baseUrl di dalam fungsi (Local Variable)
     // Ganti dengan IP dan PORT server Anda
-    const baseUrl = "http://zamnode.myserverr.web.id:2065";
+    const baseUrl = "http://127.0.0.1:3143";
 
     try {
       // Request ke endpoint baru yang kita buat
