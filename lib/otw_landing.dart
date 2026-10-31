@@ -1,7 +1,6 @@
 // otw_landing.dart - BERGAYA DARK BLUE PREMIUM
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:video_player/video_player.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'landing.dart';

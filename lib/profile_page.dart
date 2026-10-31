@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/services.dart'; // ✅ Tambahkan untuk Clipboard
 import 'change_password_page.dart';
 import 'widgets/custom_popup.dart';
