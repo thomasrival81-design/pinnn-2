@@ -457,7 +457,7 @@ class _SplashDashboardPageState extends State<SplashDashboardPage>
                   mainAxisSize: MainAxisSize.min,
                   children: const [
                     Icon(
-                      FontAwesomeIcons.telegram,
+                      Icons.telegram,
                       color: accentBlue,
                       size: 20,
                     ),

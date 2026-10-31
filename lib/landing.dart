@@ -189,9 +189,9 @@ class _LandingPageState extends State<LandingPage> {
                 ),
                 child: Column(children: [
                   Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                    _socialBtn(FontAwesomeIcons.telegram, "Telegram", "https://t.me/KawakunChan"),
+                    _socialBtn(Icons.telegram, "Telegram", "https://t.me/KawakunChan"),
                     const SizedBox(width: 24),
-                    _socialBtn(FontAwesomeIcons.tiktok, "TikTok", "https://tiktok.com/@KawakunChan"),
+                    _socialBtn(Icons.music_note, "TikTok", "https://tiktok.com/@KawakunChan"),
                   ]),
                   const SizedBox(height: 16),
                   Text("© 2026 POP PROJECT", style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 12, letterSpacing: 1)),
