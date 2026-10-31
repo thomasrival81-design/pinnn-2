@@ -236,14 +236,14 @@ class _AdminPageState extends State<AdminPage> {
                           color: accentPurple.withOpacity(0.15),
                           shape: BoxShape.circle,
                         ),
-                        child: Icon(FontAwesomeIcons.userPlus, color: accentPurple, size: 30),
+                        child: Icon(Icons.person_add, color: accentPurple, size: 30),
                       ),
                       const SizedBox(height: 16),
                       Text("CREATE ACCOUNT", style: TextStyle(color: primaryWhite, fontSize: 18, fontWeight: FontWeight.bold, fontFamily: 'Orbitron')),
                       const SizedBox(height: 24),
-                      _buildInput(label: "Username", controller: createUsernameController, icon: FontAwesomeIcons.user),
-                      _buildInput(label: "Password", controller: createPasswordController, icon: FontAwesomeIcons.lock),
-                      _buildInput(label: "Durasi (Hari)", controller: createDayController, icon: FontAwesomeIcons.calendarDay, type: TextInputType.number),
+                      _buildInput(label: "Username", controller: createUsernameController, icon: Icons.person),
+                      _buildInput(label: "Password", controller: createPasswordController, icon: Icons.lock),
+                      _buildInput(label: "Durasi (Hari)", controller: createDayController, icon: Icons.calendar_today, type: TextInputType.number),
                       
                       Container(
                         width: double.infinity,
@@ -320,13 +320,13 @@ class _AdminPageState extends State<AdminPage> {
                 Container(
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(color: Colors.blue.withOpacity(0.15), shape: BoxShape.circle),
-                  child: Icon(FontAwesomeIcons.clock, color: Colors.blue, size: 30),
+                  child: Icon(Icons.access_time, color: Colors.blue, size: 30),
                 ),
                 const SizedBox(height: 16),
                 Text("ADD DURATION", style: TextStyle(color: primaryWhite, fontSize: 18, fontWeight: FontWeight.bold, fontFamily: 'Orbitron')),
                 const SizedBox(height: 24),
-                _buildInput(label: "Username Target", controller: editUsernameController, icon: FontAwesomeIcons.userEdit),
-                _buildInput(label: "Tambah Hari", controller: editDayController, icon: FontAwesomeIcons.calendarPlus, type: TextInputType.number),
+                _buildInput(label: "Username Target", controller: editUsernameController, icon: Icons.edit),
+                _buildInput(label: "Tambah Hari", controller: editDayController, icon: Icons.calendar_month, type: TextInputType.number),
                 const SizedBox(height: 8),
                 SizedBox(
                   width: double.infinity,
@@ -377,12 +377,12 @@ class _AdminPageState extends State<AdminPage> {
                 Container(
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(color: Colors.redAccent.withOpacity(0.15), shape: BoxShape.circle),
-                  child: Icon(FontAwesomeIcons.userSlash, color: Colors.redAccent, size: 30),
+                  child: Icon(Icons.person_off, color: Colors.redAccent, size: 30),
                 ),
                 const SizedBox(height: 16),
                 Text("DELETE ACCOUNT", style: TextStyle(color: primaryWhite, fontSize: 18, fontWeight: FontWeight.bold, fontFamily: 'Orbitron')),
                 const SizedBox(height: 24),
-                _buildInput(label: "Username Target", controller: deleteController, icon: FontAwesomeIcons.user),
+                _buildInput(label: "Username Target", controller: deleteController, icon: Icons.person),
                 const SizedBox(height: 8),
                 SizedBox(
                   width: double.infinity,
@@ -549,11 +549,11 @@ class _AdminPageState extends State<AdminPage> {
                     // 3 Buttons Row
                     Row(
                       children: [
-                        _buildTopButton(title: "BUAT\nAKUN", icon: FontAwesomeIcons.userPlus, color: accentPurple, onTap: _showCreateAccountPopup),
+                        _buildTopButton(title: "BUAT\nAKUN", icon: Icons.person_add, color: accentPurple, onTap: _showCreateAccountPopup),
                         const SizedBox(width: 12),
-                        _buildTopButton(title: "ADD\nDURASI", icon: FontAwesomeIcons.clock, color: Colors.blue, onTap: _showExtendDurationPopup),
+                        _buildTopButton(title: "ADD\nDURASI", icon: Icons.access_time, color: Colors.blue, onTap: _showExtendDurationPopup),
                         const SizedBox(width: 12),
-                        _buildTopButton(title: "HAPUS\nAKUN", icon: FontAwesomeIcons.userSlash, color: Colors.redAccent, onTap: _showDeleteAccountPopup),
+                        _buildTopButton(title: "HAPUS\nAKUN", icon: Icons.person_off, color: Colors.redAccent, onTap: _showDeleteAccountPopup),
                       ],
                     ),
                     const SizedBox(height: 30),

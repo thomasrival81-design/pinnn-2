@@ -221,7 +221,7 @@ class _PemulaPageState extends State<PemulaPage> {
                     Container(
                       padding: const EdgeInsets.all(16),
                       decoration: BoxDecoration(color: pemulaColor.withOpacity(0.12), shape: BoxShape.circle),
-                      child: Icon(FontAwesomeIcons.userPlus, color: pemulaColor, size: 28),
+                      child: Icon(Icons.person_add, color: pemulaColor, size: 28),
                     ),
                     const SizedBox(height: 14),
                     const Text("BUAT AKUN", style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold, fontFamily: 'Orbitron')),
@@ -308,7 +308,7 @@ class _PemulaPageState extends State<PemulaPage> {
                 Container(
                   padding: const EdgeInsets.all(14),
                   decoration: BoxDecoration(color: Colors.blue.withOpacity(0.1), shape: BoxShape.circle),
-                  child: const Icon(FontAwesomeIcons.clock, color: Colors.blue, size: 26),
+                  child: const Icon(Icons.access_time, color: Colors.blue, size: 26),
                 ),
                 const SizedBox(height: 14),
                 const Text("TAMBAH DURASI", style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold, fontFamily: 'Orbitron')),
@@ -358,7 +358,7 @@ class _PemulaPageState extends State<PemulaPage> {
                 Container(
                   padding: const EdgeInsets.all(14),
                   decoration: BoxDecoration(color: Colors.redAccent.withOpacity(0.1), shape: BoxShape.circle),
-                  child: const Icon(FontAwesomeIcons.userSlash, color: Colors.redAccent, size: 26),
+                  child: const Icon(Icons.person_off, color: Colors.redAccent, size: 26),
                 ),
                 const SizedBox(height: 14),
                 const Text("HAPUS AKUN", style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold, fontFamily: 'Orbitron')),
@@ -591,11 +591,11 @@ class _PemulaPageState extends State<PemulaPage> {
                     const SizedBox(height: 20),
 
                     // ─── 3 ACTION CARDS ───
-                    _buildActionCard(icon: FontAwesomeIcons.userPlus, color: pemulaColor, title: "BUAT AKUN", subtitle: "Tambah user baru", onTap: _showCreatePopup),
+                    _buildActionCard(icon: Icons.person_add, color: pemulaColor, title: "BUAT AKUN", subtitle: "Tambah user baru", onTap: _showCreatePopup),
                     const SizedBox(height: 12),
-                    _buildActionCard(icon: FontAwesomeIcons.clock, color: Colors.blue, title: "TAMBAH DURASI", subtitle: "Extend expired user", onTap: _showEditPopup),
+                    _buildActionCard(icon: Icons.access_time, color: Colors.blue, title: "TAMBAH DURASI", subtitle: "Extend expired user", onTap: _showEditPopup),
                     const SizedBox(height: 12),
-                    _buildActionCard(icon: FontAwesomeIcons.userSlash, color: Colors.redAccent, title: "HAPUS AKUN", subtitle: "Delete user dari sistem", onTap: _showDeletePopup),
+                    _buildActionCard(icon: Icons.person_off, color: Colors.redAccent, title: "HAPUS AKUN", subtitle: "Delete user dari sistem", onTap: _showDeletePopup),
                     const SizedBox(height: 28),
 
                     // ─── USER LIST ───
